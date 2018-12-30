@@ -46,9 +46,11 @@ CSS |  ----> Webpack ----> bundle.js | -->  View
 HTML(React) |
 
 ## Webpack
+
+1. Set up Development Environment. 
+ - *Make sure webpack and webpack-dev-server module is installed globally.
 ```
-1. Development 
- - webpack-dev-server uses port 8080 for localhost.
+- webpack-dev-server uses port 8080 for localhost.
 ```
 
 
