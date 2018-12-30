@@ -46,10 +46,10 @@ CSS |  ----> Webpack ----> bundle.js | -->  View
 HTML(React) |
 
 ## Webpack
-
-1. ### Development 
+```
+1. Development 
  - webpack-dev-server uses port 8080 for localhost.
-
+```
 
 
 ## For fast transfer Atom packages & settings to other computer.
