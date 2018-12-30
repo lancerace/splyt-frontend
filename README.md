@@ -31,13 +31,30 @@ get necessary plugin
 
 11. [tree-view-copy-relative-path](https://atom.io/packages/tree-view-copy-relative-path) - Copy relative path to file from tree view. Right Click targeted file and click relative path.
 
-12.[atom-preview-html](https://atom.io/packages/atom-html-preview) - Preview of html viewer within atom. Ctrl+Shift+H to open previewr.
+12. [atom-preview-html](https://atom.io/packages/atom-html-preview) - Preview of html viewer within atom. Ctrl+Shift+H to open previewr.
 
-13.[autoclose-html](https://atom.io/packages/autoclose-html) - Autoclose for html.
+13. [autoclose-html](https://atom.io/packages/autoclose-html) - Autoclose for html.
 
-14.[atom-ternjs](https://atom.io/packages/atom-ternjs) - JavaScript code intelligence for atom.(HTML/CSS/JS/React Specific Packages)
+14. [atom-ternjs](https://atom.io/packages/atom-ternjs) - JavaScript code intelligence for atom.(HTML/CSS/JS/React Specific Packages)
 
 15.
+
+
+
+
+## Frontend terminology
+
+Resource | Compiler | View
+------------------------------
+JS
+
+css |   ----> Webpack ----> bundle.js | -->  View
+
+html |
+
+Reac
+
+
 
 ## For fast transfer Atom packages & settings to other computer.
 

@@ -8,10 +8,15 @@
   },
   "author": "LancerAce",
   "license": "ISC",
-  "dependencies": {
-    "react-dom": "^16.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "react": "^16.7.0"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "webpack": "^4.28.3",
+    "webpack-dev-server": "^3.1.14"
   }
 }
