@@ -37,22 +37,13 @@ get necessary plugin
 
 14. [atom-ternjs](https://atom.io/packages/atom-ternjs) - JavaScript code intelligence for atom.(HTML/CSS/JS/React Specific Packages)
 
-15.
+Resource | ModuleBundler | View
+-------- | -------- | -----
+JS | 
+CSS |  ----> Webpack ----> bundle.js | -->  View
+HTML(React) |
 
 
-
-
-## Frontend terminology
-
-Resource | Compiler | View
-------------------------------
-JS
-
-css |   ----> Webpack ----> bundle.js | -->  View
-
-html |
-
-Reac
 
 
 
