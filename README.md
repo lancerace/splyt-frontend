@@ -48,9 +48,13 @@ HTML(React) |
 ## Webpack
 
 1. Set up Development Environment. 
- - *Make sure webpack and webpack-dev-server module is installed globally.
+ - Make sure webpack and webpack-dev-server module is installed locally. Not recommended to install globally.
 ```
 - webpack-dev-server uses port 8080 for localhost.
+### Expected problem.
+ " Cannot find module "Webpack ". even though "npm i webpack webpack-cli --save-dev" is done.
+   Reason: Your terminal might not have access to node_modules/.bin folder locally. Try using gitbash terminal to execute npm         installation command. 
+
 ```
 
 
