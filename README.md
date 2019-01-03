@@ -41,16 +41,33 @@ get necessary plugin
 
 Resource | ModuleBundler | View
 -------- | -------- | -----
+<<<<<<< HEAD
 JS |
+=======
+JS | 
+>>>>>>> b4a03660244b2e9df3e2f42d8c4871ecb5fb7907
 CSS |  ----> Webpack ----> bundle.js | -->  View
 HTML(React) |
 
 ## Webpack
 
+<<<<<<< HEAD
 1. Set up Development Environment.
  - Make sure webpack and webpack-dev-server module is installed globally.
 ```
 - webpack-dev-server uses port 8080 for localhost.
+=======
+1. Set up Development Environment. 
+ - Make sure webpack and webpack-dev-server module is installed locally. Not recommended to install globally.
+
+- webpack-dev-server uses port 8080 for localhost.
+
+**Expected problem**
+```
+" Cannot find module "Webpack ". even though "npm i webpack webpack-cli --save-dev" is done.
+   Reason: Your terminal might not have access to node_modules/.bin folder locally. Try using gitbash terminal to execute npm installation command. 
+
+>>>>>>> b4a03660244b2e9df3e2f42d8c4871ecb5fb7907
 ```
 
 
