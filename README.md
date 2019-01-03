@@ -37,23 +37,21 @@ get necessary plugin
 
 14. [atom-ternjs](https://atom.io/packages/atom-ternjs) - JavaScript code intelligence for atom.(HTML/CSS/JS/React Specific Packages)
 
-15.
+## Front-End Terminiology
 
+Resource | ModuleBundler | View
+-------- | -------- | -----
+JS |
+CSS |  ----> Webpack ----> bundle.js | -->  View
+HTML(React) |
 
+## Webpack
 
-
-## Frontend terminology
-
-Resource | Compiler | View
-------------------------------
-JS
-
-css |   ----> Webpack ----> bundle.js | -->  View
-
-html |
-
-Reac
-
+1. Set up Development Environment.
+ - Make sure webpack and webpack-dev-server module is installed globally.
+```
+- webpack-dev-server uses port 8080 for localhost.
+```
 
 
 ## For fast transfer Atom packages & settings to other computer.

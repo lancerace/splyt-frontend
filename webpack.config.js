@@ -1,30 +1,46 @@
 const path = require('path');
 const webpack = require('webpack');
-module.exports {
-  mode: 'development', // "production" | "development" | "none"
-  entry: './src/main.jsx', // string | object | array
+module.exports = {
+  mode: 'development',
+  // "production" | "development" | "none".
+  //production option minified bundle,wheras development option doesn't
+  entry: './src/index.js', // string | object | array
   output: {
-    /*__dirname = directory name of current module.
-      path.resolve execute from right to left for n paramaeter. etc path.resolve(n3,n2,n1);
-    */
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
-    //configuration regarding modules
-    rules: [{
-      loader: 'babel-loader',
-      options: {
-        //value in options is passed to the loader, which should interpret it as loader options.
-        presets: ["es2015"]
-      },
-    }]
-  },
+    /*configuration regarding modules
+      rules.use []
+    */
+    rules: [
+      {
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              //value in options is passed to the loader, which should interpret it as loader options.
+              //@param  is equivalent to ["@babel/preset-react"]
+              presets: ["@babel/react"],
+              plugins: ['react-hot-loader/babel']
+            }
+          }
+        ]
+      }
+    ]
+  }, //end module:
   resolve: {
     //option for resolving module request
     extensions: ['.js', '.jsx', 'css']
   },
-  plugins: [
-    //...
-  ],
+  devServer: {
+    /*@param contentBase config webpack dev server to serve file in ./src directory.
+      @param hot Enable webpack to use Hot Module Replacement Feature. This configuration allow you to
+      exclude --hot --inline in package.json script
+    */
+    contentBase: './dist',
+    hot: true
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 }
