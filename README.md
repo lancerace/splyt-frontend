@@ -47,7 +47,7 @@ HTML(React) |
 
 ## Webpack
 
-1. Set up Development Environment. 
+1. Set up Development Environment.
  - Make sure webpack and webpack-dev-server module is installed locally. Not recommended to install globally.
 
 - webpack-dev-server uses port 8080 for localhost.
@@ -58,6 +58,13 @@ HTML(React) |
    Reason: Your terminal might not have access to node_modules/.bin folder locally. Try using gitbash terminal to execute npm installation command.
 
 ```
+
+
+## To use
+
+Clone project. Open CLI and execute
+ - npm install
+ - npm install --only=dev
 
 
 ## For fast transfer Atom packages & settings to other computer.
