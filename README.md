@@ -83,8 +83,10 @@ dev
 
 ### CSS
  - [CSS FlexBox & Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) - Updated Concept design Terminology for 2018-2019. Easier to design webpage without having to use floats and positioning.
-
- - [Dynamic CSS & CSS Module in React](https://reactjs.org/docs/dom-elements.html) - CSS Modularity and Dynamic changes.
+ 
+ - [Dynamic CSS & CSS Module in React]
+   - [1](https://reactjs.org/docs/dom-elements.html) - CSS Style with React
+   - [2](https://www.javascriptstuff.com/css-modules-by-example/)- CSS Modularity
 
  - [Css Grid over Bootstrap advantages](https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163) - Advantages in using CSS Grid/FlexBox over bootstrap. Bootstrap 4 includes flexbox but not CSS Grid.
 
