@@ -82,3 +82,5 @@ dev
 ## Appendix
 
 1. [CSS FlexBox & Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) - Updated Concept design Terminology for 2018-2019. Easier to design webpage without having to use floats and positioning.
+
+2. [Css Grid over bootstrap advantages](https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163) - Advantages in using CSS Grid/FlexBox over bootstrap design
