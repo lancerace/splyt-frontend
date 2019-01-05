@@ -84,7 +84,7 @@ dev
 ### CSS
  - [CSS FlexBox & Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) - Updated Concept design Terminology for 2018-2019. Easier to design webpage without having to use floats and positioning.
  
- - [Dynamic CSS & CSS Module in React]
+ - ## Dynamic CSS & CSS Module in React
    - [1](https://reactjs.org/docs/dom-elements.html) - CSS Style with React
    - [2](https://www.javascriptstuff.com/css-modules-by-example/)- CSS Modularity
 
