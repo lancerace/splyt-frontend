@@ -99,4 +99,6 @@ dev
 
 
 ### React Components
- - [Stateless and class component concept](https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb) - Stateless and functional react componetn.
+ - [Stateless and class component concept](https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb) - Stateless and functional react component.
+ - **Reusable Components** . By convention,name your js file as 'index.js' as node will resolve import firstly by pointing to 'index.js'.
+ 
