@@ -87,6 +87,13 @@ dev
  - ### Dynamic CSS & CSS Module in React
    - [1](https://reactjs.org/docs/dom-elements.html) - CSS Style with React
    - [2](https://www.javascriptstuff.com/css-modules-by-example/)- CSS Modularity
+   
+ - ### React reusable componetn styling revolution.  
+   - [1] Classnames with inline styling 
+
+   - [2] CSS Module with css-loader in webpack to create modularity. However,reusable component has limitation. It does not     allow you to have your own custom-ized styling.
+   
+   - [3] **Solution**: Styled-Component library
 
  - [Css Grid over Bootstrap advantages](https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163) - Advantages in using CSS Grid/FlexBox over bootstrap. Bootstrap 4 includes flexbox but not CSS Grid.
 
