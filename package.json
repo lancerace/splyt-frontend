@@ -4,24 +4,31 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js",
+    "start": "webpack-dev-server --debug --output-pathinfo --config ./webpack.config.js",
     "watch": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production npm run clean && webpack -p"
   },
   "author": "LancerAce",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "npm": "^6.7.0",
+    "popper.js": "^1.14.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "webpack": "^4.28.3"
+    "webpack": "^4.29.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "react-hot-loader": "^4.6.3",
-    "webpack-cli": "^3.1.2",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "react-hot-loader": "^4.6.5",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
   "repository": {

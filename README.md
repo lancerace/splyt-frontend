@@ -6,6 +6,9 @@ get necessary plugin
 ### Plugins
 
 1. [atom-beautify](https://atom.io/packages/atom-beautify) - Format/Indent Code.
+  Setting (Beautifier default)
+ - JSX        -> Pretty Diff
+ - JavaScript -> Prettier
 
 2. [atom-terminal](https://atom.io/packages/atom-terminal) - Open terminal with alt+shift+t.
 
@@ -53,12 +56,17 @@ HTML(React) |
 - webpack-dev-server uses port 8080 for localhost.
 
 **Expected problem**
+1.
 ```
 " Cannot find module "Webpack ". even though "npm i webpack webpack-cli --save-dev" is done.
    Reason: Your terminal might not have access to node_modules/.bin folder locally. Try using gitbash terminal to execute npm installation command.
 
 ```
+2. Using SourceMap to debug.
+SourceMap not generated on firefox/chrome browser debugging view etc..
 
+**Solution**
+Use the correct sourcemap that fit the env (Production/Dev). E.g eval-source-map for dev, source-map for prod.
 
 ## To use
 
@@ -83,16 +91,16 @@ dev
 
 ### CSS
  - [CSS FlexBox & Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) - Updated Concept design Terminology for 2018-2019. Easier to design webpage without having to use floats and positioning.
- 
+
  - ### Dynamic CSS & CSS Module in React
    - [1](https://reactjs.org/docs/dom-elements.html) - CSS Style with React
    - [2](https://www.javascriptstuff.com/css-modules-by-example/)- CSS Modularity
-   
+
  - ### React reusable componetn styling revolution.  
-   - [1] Classnames with inline styling 
+   - [1] Classnames with inline styling
 
    - [2] CSS Module with css-loader in webpack to create modularity. However,reusable component has limitation. It does not     allow you to have your own custom-ized styling.
-   
+
    - [3] **Solution**: Styled-Component library
 
  - [Css Grid over Bootstrap advantages](https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163) - Advantages in using CSS Grid/FlexBox over bootstrap. Bootstrap 4 includes flexbox but not CSS Grid.
@@ -101,4 +109,6 @@ dev
 ### React Components
  - [Stateless and class component concept](https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb) - Stateless and functional react component.
  - **Reusable Components** . By convention,name your js file as 'index.js' as node will resolve import firstly by pointing to 'index.js'.
- 
+
+#### State management
+ - React hook. (Released 2 feb 2019)
