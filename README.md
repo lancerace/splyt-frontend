@@ -7,8 +7,9 @@ get necessary plugin
 
 1. [atom-beautify](https://atom.io/packages/atom-beautify) - Format/Indent Code.
   Setting (Beautifier default)
- - JSX        -> Pretty Diff
- - JavaScript -> Prettier
+  #### Package configuration
+ - JSX        -> JS Beautify
+ - JavaScript -> JS Beautify
 
 2. [atom-terminal](https://atom.io/packages/atom-terminal) - Open terminal with alt+shift+t.
 
