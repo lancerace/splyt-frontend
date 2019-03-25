@@ -13,7 +13,8 @@ get necessary plugin
 2. [atom-terminal](https://atom.io/packages/atom-terminal) - Open terminal with alt+shift+t.
 
 3. [react](https://atom.io/packages/react) - react library for frontend development.
-  3.1 [react-snippets](https://atom.io/packages/react-snippets) - generate skeleton code fast and etc.
+
+3.1 [react-snippets](https://atom.io/packages/react-snippets) - generate skeleton code fast and etc.
 
 4. [Autocomplete-Module](https://atom.io/packages/autocomplete-modules) - autocomplete for babel language require/import statement.
 
