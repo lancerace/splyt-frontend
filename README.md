@@ -3,7 +3,7 @@
 MenuBar > Package > Command Palette > Toggle > "Install package " in Search Bar
 get necessary plugin
 ```
-### Plugins
+## Plugins
 
 1. [atom-beautify](https://atom.io/packages/atom-beautify) - Format/Indent Code.
   Setting (Beautifier default)
@@ -42,6 +42,11 @@ get necessary plugin
 13. [autoclose-html](https://atom.io/packages/autoclose-html) - Autoclose for html.
 
 14. [atom-ternjs](https://atom.io/packages/atom-ternjs) - JavaScript code intelligence for atom.(HTML/CSS/JS/React Specific Packages)
+
+## Atom known issue
+
+Opening large file result in atom hanging. Solution: Atom CMD(Ctrl+Shift+P) -> Settings -> Core -> Warn on Large File Limit -> Default 40MB .(Set to your desired MB)
+
 
 ## Front-End Terminiology
 
