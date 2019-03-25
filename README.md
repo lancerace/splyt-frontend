@@ -9,8 +9,7 @@ get necessary plugin
   Setting (Beautifier default)
   #### Package configuration
   - JSX        -> JS Beautify
-  - JavaScript -> JS Beautify
-
+  - JavaScript -> Pretty Diff
 2. [atom-terminal](https://atom.io/packages/atom-terminal) - Open terminal with alt+shift+t.
 
 3. [react](https://atom.io/packages/react) - react library for frontend development.
