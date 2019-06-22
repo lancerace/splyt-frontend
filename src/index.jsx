@@ -4,16 +4,23 @@
  * E.g import { export1 , export2 } from "module-name";
  * Note that <AppContainer> should only wrap a single React component. Mount code inside module.hot.accept() function.
  * documentation: https://github.com/gaearon/react-hot-loader
- */
-import React, {Component} from "react"; //sets the name Component to the default export of the 'react' package
+ * If we want to handle the dynamic request,use BrowserRouter. Otherwise
+ * HashRouter to serve static request
+ **/
+import React from "react"; //sets the name Component to the default export of the 'react' package
 import ReactDOM from "react-dom";
-import {AppContainer} from "react-hot-loader";
-import App from "./app";
+import { AppContainer } from "react-hot-loader";
+import { BrowserRouter as Router } from "react-router-dom";
+import "../dist/assets/styles.css";
+import "semantic-ui-css/semantic.min.css";
+import App from "./App";
 
 const render = () => {
   ReactDOM.render(
     <AppContainer>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </AppContainer>,
     document.getElementById("reactApps")
   );
@@ -28,6 +35,6 @@ if (module.hot)
    * @param dependencies
    * @param callback
    */
-  module.hot.accept("./app", () => {
+  module.hot.accept("./App", () => {
     render();
   });

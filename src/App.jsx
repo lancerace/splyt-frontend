@@ -1,16 +1,33 @@
-import React, {Component} from "react"; // { Component} = destructuring syntax
-import Grid from "../component/grid";
-import Button from "../component/button";
-class App extends Component {
-  render() {
-    console.log("boilerplate testing sourcemap tracking from app.jsx");
-    return (
-      <Grid>
-        <Button text="Testing" />
-        <div>testing React Apps Component</div>
-      </Grid>
-    );
-  }
-}
+import React, { Component } from "react"; // { Component} = destructuring syntax
+import { Route, Switch } from "react-router-dom";
+import Main from "./Main";
+import Login from "./login";
 
-export default App;
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = "";
+  } //end constructor(props)
+
+  render() {
+    //  const styles = "bgWhite";
+    /*  const theme = createMuiTheme({
+      spacing: 8
+    });*/
+    /*
+    const theme = {
+      spacing: 8
+    };
+*/
+    return (
+      <Switch>
+        <Route path="/Login" component={Login} />
+        <Route path="/" component={Main} />
+      </Switch>
+    );
+  } //end render
+} //end class
+
+App.propTypes = {};
+
+App.defaultProps = {};

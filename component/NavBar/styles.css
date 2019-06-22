@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.red {
+  color: red;
+}
+
+.bgWhite {
+  background: white;
+  /*height: 10vh;*/
+  max-height: 100px;
+}
+
+.green {
+  background: green;
+}
