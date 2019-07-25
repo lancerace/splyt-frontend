@@ -1,13 +1,11 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import { Route, Switch } from "react-router-dom";
-import PropTypes from "prop-types";
-import Pricing from "./Pricing";
-import NavBar from "../component/NavBar/NavBar";
-import PaypalGateWay from "./PaypalGateWay";
+import { Route } from "react-router-dom";
+//import PropTypes from "prop-types";
 import Home from "./Home";
+import NavBar from "../component/NavBar/NavBar";
 
-export default function Main({ path }) {
+export default function Main() {
   const styles = "bgWhite";
 
   return (
@@ -33,16 +31,7 @@ export default function Main({ path }) {
           </Grid>
         </Grid>
       </NavBar>
-      {/*here onward are content page. do SPA*/}
-
       <Route path="/Home" component={Home} />
-      <Route path="/Pricing" component={Pricing} />
-      <Route path="/Paypal" component={PaypalGateWay} />
     </Grid>
   );
 }
-
-Main.propTypes = {
-  path: PropTypes.string
-};
-Main.defaultProps = { path: "" };
