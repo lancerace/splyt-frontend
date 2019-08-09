@@ -20,11 +20,10 @@ const render = () => {
     document.getElementById("reactApps")
   );
 };
-//
-//stick to React HMR v3. v4 implementation has some problem.
+
 render();
-if (module.hot) {
+/*if (module.hot) {
   module.hot.accept("./App", () => {
     render();
   });
-}
+}*/

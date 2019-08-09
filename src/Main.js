@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Route } from "react-router-dom";
 //import PropTypes from "prop-types";
-import Home from "./Home";
+import Home from "./pages/Home";
 import NavBar from "../component/NavBar/NavBar";
 
 export default function Main() {

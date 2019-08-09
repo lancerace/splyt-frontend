@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader/root";
 import React, { Component } from "react"; // { Component} = destructuring syntax
 import { Route, Switch } from "react-router-dom";
 import Main from "./Main";
@@ -21,4 +22,4 @@ class App extends Component {
 App.propTypes = {};
 
 App.defaultProps = {};
-export default App;
+export default hot(App);

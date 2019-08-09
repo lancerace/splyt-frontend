@@ -25,12 +25,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.12.9",
+    "react-hot-loader": "^4.12.10",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "shortid": "^2.2.14",
     "url-loader": "^2.0.0",
-    "webpack": "^4.33.0"
+    "webpack": "^4.39.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -44,6 +44,7 @@
     "@babel/plugin-transform-react-jsx-source": "^7.2.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@hot-loader/react-dom": "^16.8.6",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
