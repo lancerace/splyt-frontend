@@ -4,9 +4,11 @@
     [
       "babel-plugin-react-css-modules",
       {
-        "webpackHotModuleReloading": true
+        "webpackHotModuleReloading": true,
+        "autoResolveMultipleImports": true
       }
     ],
     ["@babel/plugin-syntax-dynamic-import"],
+    ["react-hot-loader/babel"]
   ]
 }

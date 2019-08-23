@@ -25,7 +25,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 
 module.exports = {
   mode: "development",
-  entry: ["react-hot-loader/patch","./src/index.js"],
+  entry: ["react-hot-loader/patch", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "./dist"), //tell webpack the directory where it output js,index.html to
     publicPath: "/", //the url of output.path shown in browser
@@ -72,32 +72,16 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-      //  exclude: /(node_modules|bower_components)/,
+        //  exclude: /(node_modules|bower_components)/,
         include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'component')
-      ],
+          path.resolve(__dirname, "src"),
+          path.resolve(__dirname, "component")
+        ],
         //array of entries,each entry contain a loader
         use: [
           {
-            loader: "babel-loader" ,
+            loader: "babel-loader",
             options: { cacheDirectory: true }
-          }
-        ]
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "dist/assets/fonts/[name].[ext]",
-              emitFile: true
-            }
-          },
-          {
-            loader: "url-loader",
-            options: { limit: 8192 }
           }
         ]
       },
@@ -111,7 +95,7 @@ module.exports = {
           {
             loader: "css-loader", //generating unique classname
             options: {
-              importLoaders: 3, // if specifying more loaders
+              importLoaders: 1, // if specifying more loaders
               modules: true, //enable babel-plugin css-module, set to true as default is false. setting to true disable className,enable babel-plugin-css-module. else otherwise
               sourceMap: true,
               localIdentName: "[path]___[name]__[local]___[hash:base64:5]" //babel-plugin-css-module
@@ -119,10 +103,26 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "dist/assets/fonts/[name].[ext]",
+              emitFile: true
+            }
+          },
+          /*{
+            loader: "url-loader",
+            options: { limit: 8192 }
+          }*/ //url-loader seem to slow down compile time or hmr, comment out first
+        ]
       }
     ] //end rule array
   }, //end module:
-  devtool:"cheap-module-eval-source-map",
+  devtool: "cheap-module-eval-source-map",
   resolve: {
     modules: ["node_modules", "component"],
     extensions: [".js", ".jsx", ".css"]
@@ -136,21 +136,22 @@ module.exports = {
   },
   plugins: [
     new ExtractCssChunks({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "./assets/[name].css",
-      chunkFilename: "./assets/[name].css", //dynamic import ES6 Code splitting
-      orderWarning: true // Disable to remove warnings about conflicting order between imports
-    }),
-    new HtmlWebpackPlugin({
-      title: "ReactTest",
-      template: path.resolve(__dirname, "./src/index.html")
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.SourceMapDevToolPlugin(),
-    new BundleAnalyzerPlugin(),
-    /*    new WriteFilePlugin({
-  test: /^(?!.*(hot)).*/
-/*  }),*/
+        filename: "./assets/[name].css",
+        chunkFilename: "./assets/[name].css", //dynamic import ES6 Code splitting
+        orderWarning: true // Disable to remove warnings about conflicting order between imports
+      }), new HtmlWebpackPlugin({
+        title: "ReactTest",
+        template: path.resolve(__dirname, "src/index.html")
+      }),    new CleanWebpackPlugin({
+        cleanOnceBeforeBuildPatterns: ["**//*", "!./assets"],
+        cleanAfterEveryBuildPatterns: true,
+        protectWebpackAssets: true
+      }),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.SourceMapDevToolPlugin(),
+      new BundleAnalyzerPlugin(),
+      /*    new WriteFilePlugin({
+        test: /^(?!.*(hot)).*/
+      /*  }),*/
   ]
 };
