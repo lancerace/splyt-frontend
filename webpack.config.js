@@ -56,7 +56,7 @@ module.exports = {
         },
         vendors: {
           test: /[\\/]node_modules[\\/](react|react-dom|lodash)[\\/]/,
-          chunks: "all",
+          chunks: "initial",
           priority: 10,
           enforce: true
         },
@@ -110,10 +110,20 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "dist/assets/fonts/[name].[ext]",
-              emitFile: true
+              emitFile: true,
+              name: "[name].[ext]",
+              outputPath: (url, resourcePath, context) => {
+                //https://www.regextester.com . Match any existing .[ext] in 0 or more nested directories. regexp.test(string)
+                if (/([\\]?.*[\w]).(png|jpe?g|gif|svg)/.test(resourcePath)) {
+                  console.log("image:"+url);
+                  return `assets/images/${url}`;
+                }
+                else
+                  console.log("fonts:" + url);
+                  return `assets/fonts/${url}`;
+              }
             }
-          },
+          }
           /*{
             loader: "url-loader",
             options: { limit: 8192 }
@@ -136,8 +146,8 @@ module.exports = {
   },
   plugins: [
     new ExtractCssChunks({
-        filename: "./assets/[name].css",
-        chunkFilename: "./assets/[name].css", //dynamic import ES6 Code splitting
+        filename: "assets/[name].css",
+        chunkFilename: "assets/[name].css", //dynamic import ES6 Code splitting
         orderWarning: true // Disable to remove warnings about conflicting order between imports
       }), new HtmlWebpackPlugin({
         title: "ReactTest",
