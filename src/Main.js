@@ -15,9 +15,6 @@ export default function Main() {
           <Grid item lg={3} md={3}>
             <NavBar.Item to="/Home">Home</NavBar.Item>
           </Grid>
-          <Grid item lg={3} md={3}>
-            <NavBar.Item to="/Pricing">Pricing</NavBar.Item>
-          </Grid>
         </Grid>
 
         <Grid item md={6} lg={6} />

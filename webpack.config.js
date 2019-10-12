@@ -143,7 +143,8 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
     hot: true,
-    open: true
+    open: true,
+    openPage: 'home'
   },
   plugins: [
     new ExtractCssChunks({
